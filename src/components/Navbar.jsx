@@ -24,7 +24,7 @@ const NavigationBar = () => {
 
       {/* Main row: logo + nav + login */}
       <div className="px-6 md:px-12 pt-3 pb-6">
-        <div className="max-w-[1400px] mx-auto flex items-center justify-between">
+        <div className="max-w-350 mx-auto flex items-center justify-between">
           {/* Logo + Mobile Toggle */}
           <div className="flex items-center gap-3">
             <button

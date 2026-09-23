@@ -1,9 +1,11 @@
 import bannerImage from "../assets/about_us_banner.jpg";
+import AnimationAfterBanner from "./AnimationAfterBanner";
+import Container from "./Container";
 
 const AboutUs = () => {
   return (
-    <section className="w-full bg-white py-6 md:py-20 px-6 md:px-12">
-      <div className="max-w-[1400px] mx-auto flex flex-col items-start">
+    <section className="w-full bg-white pt-6 md:pt-20 overflow-x-hidden">
+      <Container className="flex flex-col items-start">
         
         {/* Main Heading */}
         <h1 className="text-2xl sm:text-4xl md:text-6xl font-bold text-gray-900 tracking-tight mb-8 md:mb-30 text-left">
@@ -15,7 +17,7 @@ const AboutUs = () => {
           <img
             src={bannerImage}
             alt="Meaningful journeys for everyone - Garibook"
-            className="w-full h-auto max-h-[550px] object-cover object-center"
+            className="w-full h-auto max-h-137.5 object-cover object-center"
           />
         </div>
 
@@ -45,8 +47,12 @@ const AboutUs = () => {
           </div>
         </div>
 
-      </div>
+
+      </Container>
+      <AnimationAfterBanner />
     </section>
+
+
   );
 };
 
