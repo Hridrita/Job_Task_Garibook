@@ -1,4 +1,4 @@
-// components/Container.jsx
+
 const Container = ({ children, className = "" }) => {
   return (
     <div className="px-6 md:px-12">
