@@ -7,7 +7,7 @@ import Container from "./Container";
 const Footer = () => {
   // Smooth Left-to-Right Underline Animation Class
   const animatedLinkClass = 
-    "relative inline-block text-gray-300 hover:text-[#ffd200] transition-colors duration-300 " +
+    "relative inline-block text-white hover:text-[#ffd200] transition-colors duration-300 " +
     "after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[2px] after:bg-[#ffd200] " +
     "after:scale-x-0 hover:after:scale-x-100 after:origin-left after:transition-transform after:duration-300";
 
@@ -71,13 +71,13 @@ const Footer = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center pb-16 border-b border-gray-800">
           {/* Download App CTA */}
           <div className="lg:col-span-6 space-y-6">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-white leading-tight">
+            <h2 className="text-2xl sm:text-2xl md:text-3xl font-extrabold text-white leading-tight">
               Download Our <br />
               Garibook Mobile App
             </h2>
             <a
               href="#download"
-              className="inline-flex items-center gap-3 bg-[#0e53ff] hover:bg-blue-700 text-white font-semibold px-7 py-3.5 rounded-2xl transition-all duration-300 shadow-lg shadow-blue-600/30"
+              className="inline-flex items-center gap-3 bg-[#0e53ff] hover:bg-blue-700 text-white font-semibold px-16 py-6 rounded-2xl transition-all duration-300 shadow-lg shadow-blue-600/30"
             >
               <span>Download App</span>
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -90,9 +90,10 @@ const Footer = () => {
           <div className="lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 gap-8 items-start pt-4 lg:pt-0">
             {/* Product By */}
             <div>
-              <h4 className="text-xl md:text-2xl font-bold mb-4">A Product By</h4>
+              <h4 className="text-xl md:text-3xl font-bold mb-4">A Product By</h4>
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 flex-shrink-0 flex items-center justify-center">
+                {/* Parent div height-width barano hoyeche (w-20 h-20 / 80px) */}
+                <div className="w-20 h-20 shrink-0 flex items-center justify-center">
                   <img src={nrbLogo} alt="NRB Solution Ltd." className="w-full h-full object-contain" />
                 </div>
                 <div>
@@ -106,9 +107,10 @@ const Footer = () => {
 
             {/* Powered By */}
             <div>
-              <h4 className="text-xl md:text-2xl font-bold mb-4">Powered By</h4>
+              <h4 className="text-xl md:text-3xl font-bold mb-4">Powered By</h4>
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 flex-shrink-0 flex items-center justify-center bg-white p-1 rounded">
+                {/* Parent div height-width barano hoyeche (w-20 h-20 / 80px) */}
+                <div className="w-20 h-20 shrink-0 flex items-center justify-center bg-white p-2 rounded-xl">
                   <img src={link3Logo} alt="Link 3 Technologies" className="w-full h-full object-contain" />
                 </div>
                 <div>
@@ -126,7 +128,6 @@ const Footer = () => {
         <div className="pt-8 pb-8 flex flex-col md:flex-row items-center justify-between gap-6 text-sm text-gray-400">
           {/* Logo & Legal Links */}
           <div className="flex flex-wrap items-center gap-6 sm:gap-8 justify-center md:justify-start">
-            {/* Fixed Logo + Text Group */}
             <a href="/" className="flex items-center gap-2">
               <img src={garibookLogo} alt="garibook logo" className="h-7 w-auto object-contain" />
               <span className="text-xl font-bold text-white tracking-wide">garibook</span>
