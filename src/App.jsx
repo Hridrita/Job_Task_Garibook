@@ -1,4 +1,5 @@
 import './App.css'
+import AboutUs from './components/AboutUs';
 import NavigationBar from './components/Navbar';
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
     <>
     
       <NavigationBar></NavigationBar>
+      <AboutUs></AboutUs>
     
       
     </>
