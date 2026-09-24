@@ -5,6 +5,7 @@ import safety from "../assets/safety_first.svg";
 import AnimationAfterBanner from "./AnimationAfterBanner";
 import Container from "./Container";
 import WhyChooseGaribook from "./WhyChooseGaribook";
+import Peoples from "./Peoples";
 
 const AboutUs = () => {
   const cardsData = [
@@ -125,6 +126,7 @@ const AboutUs = () => {
       </Container>
 
       <WhyChooseGaribook></WhyChooseGaribook>
+      <Peoples></Peoples>
     </section>
   );
 };
