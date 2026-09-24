@@ -6,6 +6,7 @@ import AnimationAfterBanner from "./AnimationAfterBanner";
 import Container from "./Container";
 import WhyChooseGaribook from "./WhyChooseGaribook";
 import Peoples from "./Peoples";
+import BecomePartOf from "./BecomePartOf";
 
 const AboutUs = () => {
   const cardsData = [
@@ -127,6 +128,7 @@ const AboutUs = () => {
 
       <WhyChooseGaribook></WhyChooseGaribook>
       <Peoples></Peoples>
+      <BecomePartOf></BecomePartOf>
     </section>
   );
 };

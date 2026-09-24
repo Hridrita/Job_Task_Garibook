@@ -34,3 +34,12 @@ body {
 .animate-marquee-bg {
   animation: marquee-bg 55s linear infinite;
 }
+
+* {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* old Edge */
+}
+
+*::-webkit-scrollbar {
+  display: none; /* Chrome, Edge, Safari */
+}
