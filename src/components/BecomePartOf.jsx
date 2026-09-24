@@ -122,15 +122,16 @@ const BecomePartOf = () => {
       if (!inside(e.clientX, e.clientY)) return;
       if (Math.abs(e.deltaY) < 4 || Math.abs(e.deltaX) > Math.abs(e.deltaY))
         return;
+
+      // Always prevent default when cursor is over banner to stop page jank
+      e.preventDefault();
+      e.stopPropagation();
+
       const dir = e.deltaY > 0 ? 1 : -1;
       if (lockRef.current) {
-        e.preventDefault(); // eat inertia while slide is moving
-        e.stopPropagation();
-        return;
+        return; // eat inertia while slide is moving
       }
       if (canMove(dir)) {
-        e.preventDefault(); // page stays, slide changes
-        e.stopPropagation();
         step(dir);
       }
     };

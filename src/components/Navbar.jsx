@@ -52,10 +52,10 @@ const NavigationBar = () => {
                 <a
                   key={index}
                   href={item.href}
-                  className={`text-[18px] font-medium pb-1 transition-colors whitespace-nowrap ${
+                  className={`relative text-[18px] font-medium pb-1 whitespace-nowrap ${
                     item.isActive
-                      ? "text-blue-600 border-b-2 border-blue-600 font-semibold"
-                      : "text-black hover:text-blue-600"
+                      ? "text-blue-600 border-b-[3px] border-blue-600 font-semibold"
+                      : "text-black after:absolute after:-bottom-[3px] after:left-1/2 after:h-[3px] after:w-0 after:-translate-x-1/2 after:bg-blue-600 after:transition-all after:duration-550 after:ease-out hover:after:w-full"
                   }`}
                 >
                   {item.name}

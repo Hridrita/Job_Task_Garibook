@@ -8,19 +8,19 @@ const WhyChooseGaribook = () => {
   const features = [
     {
       id: 1,
-      icon: <img src={quickEasyImg} alt=""></img>,
+      icon: <img src={quickEasyImg} alt="" className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7" />,
       title: "Quick & Easy\nBooking",
       description: "Book a ride in seconds using our simple app.",
     },
     {
       id: 2,
-      icon: <img src={trustedDriverImg} alt=""></img>,
+      icon: <img src={trustedDriverImg} alt="" className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7" />,
       title: "Verified & Trusted Drivers",
       description: "All drivers are checked and verified for your safety.",
     },
     {
       id: 3,
-      icon: <img src={supportImg} alt=""></img>,
+      icon: <img src={supportImg} alt="" className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7" />,
       title: "24/7 Support",
       description: "Our dedicated support team is always available.",
     },
@@ -46,23 +46,27 @@ const WhyChooseGaribook = () => {
           </div>
         </div>
 
-        
         {/* Features */}
-        <div className="grid grid-cols-1 md:grid-cols-[1.1fr_1.45fr_1fr] gap-10 md:gap-x-10 mt-10 md:mt-12 md:pl-[17%]">
-          {features.map((feature) => (
-            <div key={feature.id} className="flex flex-col items-start">
+        <div className="grid grid-cols-2 md:grid-cols-[1.1fr_1.45fr_1fr] gap-x-4 gap-y-8 md:gap-x-10 mt-10 md:mt-12 md:pl-[17%]">
+          {features.map((feature, index) => (
+            <div
+              key={feature.id}
+              className={`flex flex-col items-start ${
+                index === 2 ? "col-span-2 md:col-span-1 mt-2 md:mt-0" : ""
+              }`}
+            >
               {/* Icon */}
-              <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-[#0e53ff] flex items-center justify-center text-white text-xl sm:text-2xl mb-4">
+              <div className="w-8 h-8 sm:w-10 sm:h-10 md:w-14 md:h-14 rounded-full bg-[#0e53ff] flex items-center justify-center text-white text-xl sm:text-2xl mb-3 md:mb-4">
                 {feature.icon}
               </div>
 
               {/* Title */}
-              <h3 className="text-xl sm:text-xl md:text-3xl font-bold leading-tight mb-1 whitespace-pre-line">
+              <h3 className="text-xs sm:text-base md:text-3xl font-bold leading-tight mb-1 whitespace-pre-line">
                 {feature.title}
               </h3>
 
               {/* Description */}
-              <p className="text-[#a7a7a7] text-base sm:text-base md:text-xl font-medium leading-6 md:leading-7 max-w-sm">
+              <p className="text-[#a7a7a7] text-[10px] sm:text-sm md:text-xl font-medium leading-tight md:leading-7 max-w-[160px] sm:max-w-xs md:max-w-sm">
                 {feature.description}
               </p>
             </div>
